@@ -24,6 +24,13 @@ Starting the Tor-Proxy for preventing ip ban.
 scrapy crawl kin
 ```
 
+### Parsing
+
+```bash
+cd parser
+go run .
+```
+
 ### Caution
 
 본 프로젝트의 코드를 활용한 모든 일의 책임은 당신에게 있습니다. 
