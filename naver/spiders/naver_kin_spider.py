@@ -23,7 +23,7 @@ class NaverKinSpider(scrapy.Spider):
             keyword = random.sample(keywords, 1)[0]
             page = random.randint(0, 150)
             url = base_url.format(tag=keyword, pagination=page)
-            yield scrapy.Request(url=url, callback=self.parse)
+            yield scrapy.Request(url=url, callback=self.parse2)
 
     def parse(self, response):
         for item in response.xpath('//*[@id="main_pack"]/section/div/ul/li'):
