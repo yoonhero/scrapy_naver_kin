@@ -31,7 +31,7 @@ class NaverKinSpider(scrapy.Spider):
             yield response.follow(atag, self.parse_doc)
 
     def parse2(self, response):
-        for li in response.xpath('//*[@id="content"]/div/div[3]/div[3]/ul/li[1]'):
+        for li in response.xpath('//*[@id="content"]/div/div[3]/div[3]/ul/li'):
             atag = li.css("a.cont")[0]
             yield response.follow(atag, self.parse_doc)
 

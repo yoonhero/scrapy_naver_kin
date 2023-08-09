@@ -1,0 +1,1 @@
+docker run --net host -v /root/raw:/usr/src/app/raw -d ghcr.io/yoonhero/naver-kin-crawl-crawler

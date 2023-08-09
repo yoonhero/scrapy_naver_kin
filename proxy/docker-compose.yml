@@ -2,33 +2,25 @@ version: '3'
 services:
   tor-bart:
     container_name: 'tor-bart'
-    image: 'pickapp/tor-proxy:latest'
+    image: 'zhaowde/rotating-tor-http-proxy'
     ports:
-      - '9990:8888'
-    environment:
-      - IP_CHANGE_SECONDS=30
+      - '9990:3128'
     restart: always
   tor-homer:
     container_name: 'tor-homer'
-    image: 'pickapp/tor-proxy:latest'
+    image: 'zhaowde/rotating-tor-http-proxy'
     ports:
-      - '9991:8888'
-    environment:
-      - IP_CHANGE_SECONDS=25
+      - '9991:3128'
     restart: always
   tor-marge:
     container_name: 'tor-marge'
-    image: 'pickapp/tor-proxy:latest'
+    image: 'zhaowde/rotating-tor-http-proxy'
     ports:
-      - '9992:8888'
-    environment:
-      - IP_CHANGE_SECONDS=45
+      - '9992:3128'
     restart: always
   tor-lisa:
     container_name: 'tor-lisa'
-    image: 'pickapp/tor-proxy:latest'
+    image: 'zhaowde/rotating-tor-http-proxy'
     ports:
-      - '9993:8888'
-    environment:
-      - IP_CHANGE_SECONDS=60
+      - '9993:3128'
     restart: always
