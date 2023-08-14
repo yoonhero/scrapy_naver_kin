@@ -7,6 +7,7 @@ NEWSPIDER_MODULE = "naver.spiders"
 DOWNLOADER_MIDDLEWARES = {
     'rotating_proxies.middlewares.RotatingProxyMiddleware': 610,
     'rotating_proxies.middlewares.BanDetectionMiddleware': 620,
+    'scrapy_selenium.SeleniumMiddleware': 800
 }
 ROTATING_PROXY_LIST_PATH = 'proxy-list.txt'
 ROTATING_PROXY_PAGE_RETRY_TIMES = 5
